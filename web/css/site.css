@@ -1,0 +1,213 @@
+html,
+body {
+    height: 100%;
+    padding-top: 25px;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+/*---*/
+.navbar-inverse.brand-color {
+    background-color: #31708f;
+    border-color: #005681;
+}
+
+.navbar-inverse.brand-color .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-inverse.brand-color .nav.navbar-nav li a:hover, .nav.navbar-nav li a:active {
+    background-color: #06526f;
+}
+
+.navbar-inverse.brand-color .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    background-color: #06526f;
+}
+
+.dropdown-menu > li > a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: #fff;
+}
+
+.brand-text-color {
+    color: red;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #06526f;
+}
+
+.container.main-container {
+    background-color: #fbfbfb;
+    padding-top: 20px;
+    min-height: 1000px;
+}
+
+.wrap {
+    background-image: url(../images/autumn.png);
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.top-indent {
+    margin-top: 10px;
+}
+
+.bottom-indent {
+    margin-bottom: 10px;
+}
+
+.left-indent {
+    margin-left: 10px;
+}
+
+.right-indent {
+    margin-right: 10px;
+}
+
+.top-indent-collapse {
+    margin-top: 0;
+}
+
+.bottom-indent-collapse {
+    margin-bottom: 0;
+}
+
+.jumbotron.silkscreen .container {
+    /* background-image: url(../images/silkscreen/symphony.png); */
+    background-color: #31708f;
+    height: 370px;
+}
+
+.jumbotron.silkscreen .container h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.jumbotron.silkscreen .container p {
+    color: #fff;
+    font-size: 2em;
+    margin-top: 60px;
+}
+
+.gototop{position: fixed;bottom: 5px; right: 5px;background: rgba(0,0,0,0.5);padding: 10px;color: #fff;}
+.gototop i{line-height: 0.5em;}
