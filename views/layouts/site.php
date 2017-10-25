@@ -58,7 +58,7 @@ SiteAppAsset::register($this);
 					'template' => '<a href="{url}" class="url-class">{label}</a>',
 					'items' => [
 						['label' => 'Требования к макету', 'url' => ['d-card/demands']],
-						['label' => 'Прайс лист', 'url' => ['d-card/calculate']],
+						['label' => 'Расчет стоимости', 'url' => ['d-card/calculate']],
 					]
 				],
 				['label' => 'Тампопечать',

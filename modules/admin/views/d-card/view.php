@@ -30,14 +30,63 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'count',
-            'cover',
-            'barcode',
-            'number',
-            'signature',
-            'magnet',
-            'scketch',
-            'emboss',
-            'design',
+            //'cover',
+            [
+                'attribute' => 'cover',
+                'value' => function($model)
+                {
+                    switch($model->cover) {
+                        case 'white':
+                            return 'золото';
+                        case 'silver':
+                            return 'серебро';
+                        case 'gold':
+                            return 'золото';
+                    }
+                }
+            ],
+            //'barcode',
+            [
+                'attribute' => 'barcode',
+                'value' => ($model->barcode) ? '<span class="text-success fa fa-check"></span>' : '<span class="text-danger fa fa-times"></span>',
+                'format' => 'html',
+            ],
+            //'number',
+            [
+                'attribute' => 'number',
+                'value' => ($model->number) ? '<span class="text-success fa fa-check"></span>' : '<span class="text-danger fa fa-times"></span>',
+                'format' => 'html',
+            ],
+            //'signature',
+            [
+                'attribute' => 'signature',
+                'value' => ($model->signature) ? '<span class="text-success fa fa-check"></span>' : '<span class="text-danger fa fa-times"></span>',
+                'format' => 'html',
+            ],
+            //'magnet',
+            [
+                'attribute' => 'magnet',
+                'value' => ($model->magnet) ? '<span class="text-success fa fa-check"></span>' : '<span class="text-danger fa fa-times"></span>',
+                'format' => 'html',
+            ],
+            //'scketch',
+            [
+                'attribute' => 'scketch',
+                'value' => ($model->scketch) ? '<span class="text-success fa fa-check"></span>' : '<span class="text-danger fa fa-times"></span>',
+                'format' => 'html',
+            ],
+            //'emboss',
+            [
+                'attribute' => 'emboss',
+                'value' => ($model->emboss) ? '<span class="text-success fa fa-check"></span>' : '<span class="text-danger fa fa-times"></span>',
+                'format' => 'html',
+            ],
+            //'design',
+            [
+                'attribute' => 'design',
+                'value' => ($model->design) ? '<span class="text-success fa fa-check"></span>' : '<span class="text-danger fa fa-times"></span>',
+                'format' => 'html',
+            ],
             'name',
             'company',
             'phone',
