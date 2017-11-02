@@ -48,7 +48,7 @@ $this->title = 'шелкотрафаретная печать';
 		</div>
 		<div class="gallery row">
 			<div class="col-sm-12">
-				<h3 class="text-center">Галерея работ</h3>
+				<h3 class="text-center">Каталог печатной продукции</h3>
 			</div>
 			<ul class="thumbnails list-unstyled">
 				<?php foreach($categories as $category) : ?>

@@ -48,7 +48,7 @@ SiteAppAsset::register($this);
 					'options'=>['class'=>'dropdown'],
 					'template' => '<a href="{url}" class="url-class">{label}</a>',
 					'items' => [
-						['label' => 'Галерея работ', 'url' => ['silk-screen/gallery']],
+						['label' => 'Каталог печатной продукции', 'url' => ['silk-screen/gallery']],
 						['label' => 'Прайс лист', 'url' => ['silk-screen/price']],
 					]
 				],

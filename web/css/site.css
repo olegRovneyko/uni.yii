@@ -211,3 +211,8 @@ a.desc:after {
 
 .gototop{position: fixed;bottom: 5px; right: 5px;background: rgba(0,0,0,0.5);padding: 10px;color: #fff;}
 .gototop i{line-height: 0.5em;}
+
+.carousel-control{width: 10%;}
+.carousel-control i.fa{top: 50%;position: absolute;margin-top: -30px;left: 0;right: 0;}
+/*.carousel .item a.view{position: absolute;top: -10%;left:50%;text-align: center;background: #31708f;color: #fff;display: inline-block;padding:0.75em 2em;font-size: 1.25em;margin-top: -24px;margin-left: -70px;}
+.carousel .item:hover a.view{top:50%;text-decoration: none;}*/

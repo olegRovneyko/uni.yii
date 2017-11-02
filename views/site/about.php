@@ -11,6 +11,40 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-about">
 	<div class="row">
 		<div class="col-md-9">
+            <div class="bottom-indent">
+                <div id="carousel-silkscreen" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <?= Html::img('@web/images/carousel/about1.jpg', ['class' => 'img img-responsive']) ?>
+                        </div>
+                        <div class="item">
+                            <?= Html::img('@web/images/carousel/about2.jpg', ['class' => 'img img-responsive']) ?>
+                        </div>
+                        <div class="item">
+                            <?= Html::img('@web/images/carousel/about3.jpg', ['class' => 'img img-responsive']) ?>
+                        </div>
+                        <div class="item">
+                            <?= Html::img('@web/images/carousel/about4.jpg', ['class' => 'img img-responsive']) ?>
+                        </div>
+                        <div class="item">
+                            <?= Html::img('@web/images/carousel/about5.jpg', ['class' => 'img img-responsive']) ?>
+                        </div>
+                        <div class="item">
+                            <?= Html::img('@web/images/carousel/about6.jpg', ['class' => 'img img-responsive']) ?>
+                        </div>
+                        <div class="item">
+                            <?= Html::img('@web/images/carousel/about7.jpg', ['class' => 'img img-responsive']) ?>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-silkscreen" role="button" data-slide="prev">
+                        <i class="fa fa-3x fa-angle-left"></i>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-silkscreen" role="button" data-slide="next">
+                        <i class="fa fa-3x fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
 			<div class="row bottom-indent">
 				<div class="col-md-7">
                     <h1><?= Html::encode($this->title) ?></h1>

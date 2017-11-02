@@ -22,7 +22,7 @@ class SilkScreenController extends AppController
 
     public function actionGallery($id = 1)
     {
-        $this->setMeta('Галерея работ', $this->keywords, $this->description);
+        $this->setMeta('Каталог печатной продукции', $this->keywords, $this->description);
         $products = Product::find()->where(['category_id' => $id]);
         $categories = Category::find()->where('parent_id = 6')->all();
         $pages = new Pagination([

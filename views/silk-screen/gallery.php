@@ -10,7 +10,7 @@ use yii\helpers\Url;
 <div class="row">
 	<div class="gallery top-indent bottom-indent col-sm-9">
 		<?php 
-		$this->title = 'галерея работ';
+		$this->title = 'Каталог печатной продукции';
 		$this->params['breadcrumbs'][] = ['label' => 'шелкотрафаретная печать', 'url'=> ['silk-screen/']];
 		$this->params['breadcrumbs'][] = $this->title; 
 		?>
