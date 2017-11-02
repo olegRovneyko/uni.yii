@@ -37,7 +37,7 @@ AppAsset::register($this);
         <div class="container">
             <div class="navbar-header">
                 <!-- Logo Starts -->
-                <a class="navbar-brand" href="<?= Url::home() ?>"><span style="color: red;">Uni</span>Print</a>
+                <a class="navbar-brand" href="#" data-toggle="popover"><span style="color: red;">Uni</span>Print</a>
                 <!-- #Logo Ends -->
 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">

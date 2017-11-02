@@ -243,4 +243,19 @@ use yii\captcha\Captcha;
         <?= Yii::$app->session->getFlash('error') ?>
     </div>
     <?php endif; ?>
-
+    <?php
+    $url = Url::to(['silk-screen/gallery']);
+$script = <<<JS
+    var content = '<p class="text-center"><a href="$url" class="btn btn-success"><i class="fa fa-external-link"></i><b> перейти</b></a></p>';
+    $('[data-toggle="popover"]').popover({
+        placement: 'auto right',
+        html: true,
+        title: '<lead>Каталог печати по текстилю</lead>',
+        content: content,
+        delay: {show: 200, hide: 200}
+    });
+    $('[data-toggle="popover"]').popover('show');
+    $('.popover').addClass('wow shake animated').data('wow-iteration', 20).data('wow-duration', '3s').css('opacity', '.85');
+JS;
+$this->registerJs($script, yii\web\View::POS_LOAD);
+    ?>
