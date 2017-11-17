@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.4.15.7
+-- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 25 2017 г., 22:53
--- Версия сервера: 5.6.34
--- Версия PHP: 7.0.14
+-- Время создания: Ноя 13 2017 г., 09:00
+-- Версия сервера: 5.5.50
+-- Версия PHP: 7.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,13 +26,13 @@ SET time_zone = "+00:00";
 -- Структура таблицы `category`
 --
 
-CREATE TABLE `category` (
+CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   `parent_id` int(11) DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `category`
@@ -45,7 +45,8 @@ INSERT INTO `category` (`id`, `title`, `description`, `image`, `parent_id`) VALU
 (4, 'детское белье', NULL, 'n003', 6),
 (5, 'визитные карточки', NULL, NULL, 7),
 (6, 'печать на текстиле', NULL, NULL, 0),
-(7, 'офсетная печать', NULL, NULL, 0);
+(7, 'офсетная печать', NULL, NULL, 0),
+(8, 'печать на пакетах', NULL, 'p003', 6);
 
 -- --------------------------------------------------------
 
@@ -53,7 +54,7 @@ INSERT INTO `category` (`id`, `title`, `description`, `image`, `parent_id`) VALU
 -- Структура таблицы `dc_order`
 --
 
-CREATE TABLE `dc_order` (
+CREATE TABLE IF NOT EXISTS `dc_order` (
   `id` int(11) NOT NULL,
   `count` int(11) NOT NULL,
   `cover` enum('white','silver','gold','') NOT NULL DEFAULT 'white',
@@ -72,7 +73,7 @@ CREATE TABLE `dc_order` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   `sum` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `dc_order`
@@ -88,7 +89,7 @@ INSERT INTO `dc_order` (`id`, `count`, `cover`, `barcode`, `number`, `signature`
 -- Структура таблицы `dc_price`
 --
 
-CREATE TABLE `dc_price` (
+CREATE TABLE IF NOT EXISTS `dc_price` (
   `id` int(11) NOT NULL,
   `count` varchar(20) NOT NULL,
   `price` float NOT NULL,
@@ -100,7 +101,7 @@ CREATE TABLE `dc_price` (
   `scketch` float NOT NULL,
   `emboss` float NOT NULL,
   `design` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `dc_price`
@@ -122,14 +123,14 @@ INSERT INTO `dc_price` (`id`, `count`, `price`, `gold_cover`, `barcode`, `number
 -- Структура таблицы `product`
 --
 
-CREATE TABLE `product` (
+CREATE TABLE IF NOT EXISTS `product` (
   `id` int(11) NOT NULL,
   `vendor_id` varchar(10) NOT NULL,
   `title` varchar(255) NOT NULL,
   `category_id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=443 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `product`
@@ -475,7 +476,22 @@ INSERT INTO `product` (`id`, `vendor_id`, `title`, `category_id`, `image`, `desc
 (424, 'v-070', '', 5, 'v070', ''),
 (425, 'v-071', '', 5, 'v071', ''),
 (426, 'v-072', '', 5, 'v072', ''),
-(427, 'v-073', '', 5, 'v073', '');
+(427, 'v-073', '', 5, 'v073', ''),
+(428, 'p-001', '', 8, 'p001', ''),
+(429, 'p-002', '', 8, 'p002', ''),
+(430, 'p-003', '', 8, 'p003', ''),
+(431, 'o-050', '', 2, 'o050', ''),
+(432, 'o-051', '', 2, 'o051', ''),
+(433, 'o-052', '', 2, 'o052', ''),
+(434, 'a-041', '', 3, 'a041', ''),
+(435, 'a-042', '', 3, 'a042', ''),
+(436, 's-166', '', 1, 's166', ''),
+(437, 's-167', '', 1, 's167', ''),
+(438, 'o-053', '', 2, 'o053', ''),
+(439, 'a-043', '', 3, 'a043', ''),
+(440, 'p-004', '', 8, 'p004', ''),
+(441, 's-168', '', 1, 's168', ''),
+(442, 'o-054', '', 2, 'o054', '');
 
 -- --------------------------------------------------------
 
@@ -483,7 +499,7 @@ INSERT INTO `product` (`id`, `vendor_id`, `title`, `category_id`, `image`, `desc
 -- Структура таблицы `ss_price`
 --
 
-CREATE TABLE `ss_price` (
+CREATE TABLE IF NOT EXISTS `ss_price` (
   `id` int(11) NOT NULL,
   `size` varchar(2) NOT NULL,
   `count` varchar(20) NOT NULL,
@@ -493,7 +509,7 @@ CREATE TABLE `ss_price` (
   `four` float(10,2) NOT NULL,
   `five` float(10,2) NOT NULL,
   `six` float(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `ss_price`
@@ -522,19 +538,19 @@ INSERT INTO `ss_price` (`id`, `size`, `count`, `one`, `two`, `three`, `four`, `f
 -- Структура таблицы `user`
 --
 
-CREATE TABLE `user` (
-  `id` int(10) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `user` (
+  `id` int(10) unsigned NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `auth_key` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `auth_key`) VALUES
-(1, 'admin', '$2y$13$TAN5UYcDu8nGRkne6Ff2tuMb5wpyqnVo5NeUOTeXz.SMvecWZfo8O', 'u2KOoMbU2jKU0Z90c2Z3ml5tsO1BCNge');
+(1, 'admin', '$2y$13$TAN5UYcDu8nGRkne6Ff2tuMb5wpyqnVo5NeUOTeXz.SMvecWZfo8O', '3gXSxsW0YeDkKjUYOFfUlRG8oF2F57lr');
 
 --
 -- Индексы сохранённых таблиц
@@ -586,32 +602,32 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для таблицы `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT для таблицы `dc_order`
 --
 ALTER TABLE `dc_order`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT для таблицы `dc_price`
 --
 ALTER TABLE `dc_price`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT для таблицы `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=428;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=443;
 --
 -- AUTO_INCREMENT для таблицы `ss_price`
 --
 ALTER TABLE `ss_price`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --

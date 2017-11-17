@@ -107,27 +107,29 @@ SiteAppAsset::register($this);
 <footer class="footer">
 	<div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <p>
                     &copy; UniPrint <?= date('Y') ?>
                 </p>
             </div>
-            <div class="col-md-4">
-                <p class="pull-left">
+            <div class="col-md-6">
                     <i class="fa fa-phone"></i>&nbsp;&nbsp;068-650-50-55, 097-274-51-21
-                </p>
-                <p class="pull-right">
-                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;info@uniptint.ua
-                </p>
-
+										&nbsp;|&nbsp;
+                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;info@uniptint.com.ua
             </div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4 text-right">
+            <div class="col-md-3 text-right">
                 <p><?= Yii::powered() ?> <em>(Yes It Is!)</em></p>
             </div>
             <a href="#home" class="gototop ">
                 <i class="fa fa-angle-up  fa-3x"></i>
             </a>
+<?php $script = <<<JS
+            		$('.gototop').click(function(e) {
+            			e.preventDefault();
+            			$('html, body').animate({scrollTop: 0}, 600,'swing');
+            		});
+JS;
+$this->registerJs($script, yii\web\View::POS_LOAD); ?>
         </div>
 	</div>
 </footer>

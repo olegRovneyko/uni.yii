@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <i class="fa fa-phone"></i>&nbsp;&nbsp;068-650-50-55, 097-274-51-21
                 </p>
                 <p class="pull-right">
-                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;info@uniptint.ua
+                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;info@uniptint.com.ua
                 </p>
             </div>
         </div>

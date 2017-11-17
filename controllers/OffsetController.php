@@ -21,8 +21,8 @@ class OffsetController extends AppController
     {
         $this->setMeta('Визитные карточки', $this->keywords, $this->description);
 
-        $products = Product::find()->where(['category_id' => $id]);
-        $categories = Category::find()->where('parent_id = 5')->all();
+        $products = Product::find()->where(['category_id' => $id, 'available' => '1']);
+        $categories = Category::find()->where('parent_id = 7')->all();
         $pages = new Pagination([
             'defaultPageSize' => '21',
             'totalCount' => $products->count(),

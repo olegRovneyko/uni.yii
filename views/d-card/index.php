@@ -56,6 +56,78 @@ $this->title = 'Пластиковые карточки';
 						</div>
 					</a>
 				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d003.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d003.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>М'ясна лавка</p>
+						</div>
+					</a>
+				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d004.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d004.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>Глянец</p>
+						</div>
+					</a>
+				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d005.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d005.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>Серебряная нить</p>
+						</div>
+					</a>
+				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d006.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d006.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>Поло</p>
+						</div>
+					</a>
+				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d007.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d007.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>Ивушки</p>
+						</div>
+					</a>
+				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d008.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d008.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>Марио</p>
+						</div>
+					</a>
+				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d009.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d009.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>Серебряная нить</p>
+						</div>
+					</a>
+				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d010.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d010.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>Дакота бар</p>
+						</div>
+					</a>
+				</li>
+				<li class="col-xs-6 col-md-4 shadow-box">
+					<a href="<?= Url::to('@web/images/d-cards/gallery/d011.png')?>" class="thumbnail" title="" data-description="изображение">
+						<img src="<?= Url::to('@web/images/d-cards/gallery/thumbnails/d011.png')?>" alt="">
+						<div class="caption">
+							<p class='text-center'>Olimpos</p>
+						</div>
+					</a>
+				</li>
 			</ul>
 		</div>
 	</div>

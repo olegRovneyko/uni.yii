@@ -27,6 +27,18 @@ use yii\helpers\Url;
         </ul>
     </div>
     <div class="col-sm-3">
+        <ul class="nav nav-pills nav-stacked list-group">
+        <?php foreach ($categories as $category) : ?>
+            <li>
+                <a href="<?= Url::to(['offset/v-cards', 'id' => $category->id]) ?>"
+                   class="list-group-item<?php if ($id == $category->id) echo ' active'; ?>">
+                <i class="fa fa-chevron-left" aria-hidden="true">&nbsp;&nbsp;</i>
+                <?= $category->title ?>
+                <span class="badge pull-right"><?= count($category->products) ?></span></a>
+                </a>
+            </li>
+        <?php endforeach; ?>
+        </ul>
 
         <div class="panel panel-primary">
             <div class="panel-heading">Визитные карточки</div>

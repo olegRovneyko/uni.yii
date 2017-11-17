@@ -104,7 +104,7 @@ use yii\captcha\Captcha;
                             </a>
                         </div>
                         <div class="item active">
-                            <?= Html::img('@web/images/carousel/pp3.jpg', ['class' => 'img img-responsive']) ?>
+                            <?= Html::img('@web/images/carousel/pp4.jpg', ['class' => 'img img-responsive']) ?>
                             <a href="<?= Url::to(['pad-printing/']) ?>" class="view">
                                 <i class="fa fa-external-link"></i> перейти
                             </a>
@@ -218,7 +218,7 @@ use yii\captcha\Captcha;
                                     <i class="fa fa-phone"></i>&nbsp;&nbsp;068-650-50-55, 097-274-51-21
                                 </div>
                                 <div class="pull-right">
-                                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;info@uniptint.ua
+                                    <i class="fa fa-envelope"></i>&nbsp;&nbsp;info@uniptint.com.ua
                                 </div>
                             </div>
                         </div>

@@ -206,15 +206,26 @@ $this->params['breadcrumbs'][] = $this->title;
 				</a>
 				</div>	
 			</div>
-			 <div class="panel panel-primary">
-        <div class="panel-heading">Тампопечать</div>            
-        <div class="panel-body">
-            <a href="<?= Url::to(['pad-printing/']) ?>">
-                <?= Html::img('@web/images/pad-printing/pp.jpg', ['alt' => 'изготовление исконтных карточек', 'class' => 'img img-responsive']) ?>
-                <p>Тампопечать используется для брендирования самых востребованных промоподарков с плоской или выпуклой поверхностью: ручек, брелков, зажигалок, светоотражателей.</p>
-            </a>
-        </div>
-    	</div>			
+            <div class="panel panel-primary">
+                <div class="panel-heading">Тампопечать</div>
+                <div class="panel-body">
+                    <a href="<?= Url::to(['pad-printing/']) ?>">
+                        <?= Html::img('@web/images/pad-printing/pp.jpg', ['alt' => 'изготовление исконтных карточек', 'class' => 'img img-responsive']) ?>
+                        <p>Тампопечать используется для брендирования самых востребованных промоподарков с плоской или выпуклой поверхностью: ручек, брелков, зажигалок, светоотражателей.</p>
+                    </a>
+                </div>
+    	    </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">Деколь</div>
+                <div class="panel-body">
+                    <a href="<?= Url::to(['decol/']) ?>">
+                        <div class="text-center">
+                        <?= Html::img('@web/images/decol/cup.png', ['alt' => 'изготовление исконтных карточек', 'width' => '80%']) ?>
+                        <p class="top-indent">Деколь применяется для печати на керамической, фарфоровой и стеклянной посуде...</p>
+                        </div>
+                    </a>
+                </div>
+    	    </div>
 		</div>
 	</div>
 </div>
