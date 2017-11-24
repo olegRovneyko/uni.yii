@@ -37,9 +37,9 @@ class SilkScreenController extends AppController
     public function actionPrice()
     {
         $this->setMeta('Стоимость шелкотрафаретной печати', $this->keywords, $this->description);
-        $a4 = SSPrice::findAll(['size' => 'a4']);
+        $a6 = SSPrice::findAll(['size' => 'a6']);
         $a3 = SSPrice::findAll(['size' => 'a3']);
-        return $this->render('price', compact('a4', 'a3'));
+        return $this->render('price', compact('a6', 'a3'));
     }
 
 }

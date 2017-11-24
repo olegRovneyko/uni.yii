@@ -27,7 +27,7 @@ SiteAppAsset::register($this);
 <body id="home">
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<div class="wrap" style="background: url(<?= '/images/' . setBackgroungSeason()?>)">
 	<div>
 		<?php
 		NavBar::begin([

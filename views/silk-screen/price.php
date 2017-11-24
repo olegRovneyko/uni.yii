@@ -15,7 +15,7 @@ use yii\helpers\Url;
 			<p>Стоимость шелкотрафаретной печати на ткани<br> формируется относительно тиража, количества цветов на изображении, а также от размера наносимого рисунка.</p>
 		</blockquote>
 		<table class="table table-bordered table-hover text-center">
-			<caption class="lead text-danger bottom-collapse">до размера А-4</caption>
+			<caption class="lead text-danger bottom-collapse">до размера А-6</caption>
 			<thead>
 				<tr>
 					<td class="success">тираж</td>
@@ -32,7 +32,7 @@ use yii\helpers\Url;
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($a4 as $item) : ?>
+				<?php foreach($a6 as $item) : ?>
 					<tr>
 						<td><?= $item->count ?></td>
 						<td><?= $item->one ?></td>
@@ -45,6 +45,7 @@ use yii\helpers\Url;
 				<?php endforeach; ?>
 			</tbody>
 		</table>
+		<p>Минимальная стоимость ЗАКАЗА – <strong>700 грн.</strong></p>
 		<table class="table table-bordered table-hover text-center">
 			<caption class="lead text-danger bottom-collapse">до размера А-3</caption>
 			<thead>
@@ -76,6 +77,14 @@ use yii\helpers\Url;
 				<?php endforeach; ?>
 			</tbody>
 		</table>
+		<p>
+		Минимальная стоимость ЗАКАЗА – <strong>900 грн.</strong><br>
+		ИЗГОТОВЛЕНИЕ <strong>МАКЕТА от 100 грн</strong><br>
+		Печать сольвентными красками, флюор и красками с добавками <strong>+20%</strong><br>
+		Печать на готовых изделиях <strong>+2 грн/шт</strong><br>
+		Услуга глянцевания <strong>+5 грн/шт</strong><br>
+		При смене цвета, перестройке под разный крой <strong>+30 грн/действие</strong><br>
+		</p>
 	</div>
 	<div class="col-md-3">
 		<div class="panel panel-primary">
