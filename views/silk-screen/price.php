@@ -45,7 +45,7 @@ use yii\helpers\Url;
 				<?php endforeach; ?>
 			</tbody>
 		</table>
-		<p>Минимальная стоимость ЗАКАЗА – <strong>700 грн.</strong></p>
+		<p><small>Минимальная стоимость ЗАКАЗА –</small> <strong>700 грн.</strong></p>
 		<table class="table table-bordered table-hover text-center">
 			<caption class="lead text-danger bottom-collapse">до размера А-3</caption>
 			<thead>
@@ -78,12 +78,12 @@ use yii\helpers\Url;
 			</tbody>
 		</table>
 		<p>
-		Минимальная стоимость ЗАКАЗА – <strong>900 грн.</strong><br>
-		ИЗГОТОВЛЕНИЕ <strong>МАКЕТА от 100 грн</strong><br>
-		Печать сольвентными красками, флюор и красками с добавками <strong>+20%</strong><br>
-		Печать на готовых изделиях <strong>+2 грн/шт</strong><br>
-		Услуга глянцевания <strong>+5 грн/шт</strong><br>
-		При смене цвета, перестройке под разный крой <strong>+30 грн/действие</strong><br>
+		<small>Минимальная стоимость ЗАКАЗА – </small><strong>900 грн.</strong><br>
+		 	<small>Изготовление МАКЕТА</small> <strong>от 100 грн</strong><br>
+		<small>Печать сольвентными красками, флюор и красками с добавками</small> <strong>+20%</strong><br>
+		<small>Печать на готовых изделиях</small> <strong>+2 грн/шт</strong><br>
+		<small>Услуга глянцевания</small> <strong>+5 грн/шт</strong><br>
+		<small>При смене цвета, перестройке под разный крой</small> <strong>+30 грн/действие</strong><br>
 		</p>
 	</div>
 	<div class="col-md-3">
